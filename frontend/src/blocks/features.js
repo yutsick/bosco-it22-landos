@@ -1,10 +1,14 @@
+import './features.css';
+
 export function features({anchor, title, items}){
+    // console.log(items);
+    
     return `
         <section class="features" id="${anchor}" >
             <h2 class="section-title">${title}</h2>
             <div class="features__grid">
 
-            ${items.map(({icon, title, text}) => {
+            ${items.map(({icon, title, text}) =>  
                 `
                 <article class="feature">
                     <span class="feature__icon">${icon}</span>
@@ -12,7 +16,7 @@ export function features({anchor, title, items}){
                     <p class="feature__text">${text}</p>
                 </article>
                 `
-            }).join('')}
+            ).join('')}
 
             </div>
         </section>
