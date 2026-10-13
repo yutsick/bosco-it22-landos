@@ -22,6 +22,8 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, Pages],
+  cors: [ process.env.FRONTEND_URL || ''],
+  serverURL: process.env.CMS_URL || '',
   globals: [Common],
   endpoints: [commonEndpoint, pageEndpoint],
   editor: lexicalEditor(),
