@@ -9,6 +9,7 @@ import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import {Pages} from './collections/Pages'
 import {Common} from './globals/Common'
+import { commonEndpoint, pageEndpoint } from './endpoints'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -22,6 +23,7 @@ export default buildConfig({
   },
   collections: [Users, Media, Pages],
   globals: [Common],
+  endpoints: [commonEndpoint, pageEndpoint],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
