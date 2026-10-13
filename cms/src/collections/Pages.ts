@@ -16,6 +16,7 @@ export const Pages: CollectionConfig = {
             unique: true,
             defaultValue: '/',
         },
+        {name: 'title', type: 'text', label: 'Назва сторінки', required:true},
         {
             name: 'blocks',
             type: 'blocks',
