@@ -8,6 +8,10 @@
     "frontend": {
       "root": "frontend",
       "framework": "vite"
+    },
+    "cms":{
+      "root": "cms",
+      "framework": "react"
     }
   },
   "rewrites": [
